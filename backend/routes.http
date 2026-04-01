@@ -1,0 +1,39 @@
+//extensao REST Client para fazer as requisicoes
+
+### ➕ Criar gasto
+POST http://localhost:3333/gastos
+Content-Type: application/json
+
+{
+  "valor": 50,
+  "descricao": "mercado",
+  "categoria": "alimentacao",
+  "empresa_id": 1
+}
+
+###
+
+### 📄 Listar todos os gastos
+GET http://localhost:3333/gastos
+
+###
+
+### ✏️ Atualizar gasto (troque o ID se necessário)
+PUT http://localhost:3333/gastos/1
+Content-Type: application/json
+
+{
+  "valor": 80,
+  "descricao": "mercado atualizado",
+  "categoria": "alimentacao"
+}
+
+###
+
+### ❌ Deletar gasto (troque o ID)
+DELETE http://localhost:3333/gastos/1
+
+###
+
+### 🔍 Listar novamente (pra confirmar delete)
+GET http://localhost:3333/gastos

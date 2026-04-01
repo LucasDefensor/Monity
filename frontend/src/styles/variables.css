@@ -1,0 +1,25 @@
+:root {
+  /* ========== COLORS ========== */
+  --color-primary: #00d4ff;
+  --color-primary-soft: rgba(0, 213, 255, 0.178);
+  --color-danger: #ef4444;
+
+  /* ========== BACKGROUND ========== */
+  --bg-main: #0f1115;
+  --bg-surface: rgba(255, 255, 255, 0.05);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ========== TEXT ========== */
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  /* ========== BORDERS ========== */
+  --border-default: rgba(255, 255, 255, 0.12);
+
+  /* ========== EFFECTS ========== */
+  --blur: blur(5px);
+  --radius: 12px;
+
+  /* ========== SPACING ========== */
+  --gap: 16px;
+}

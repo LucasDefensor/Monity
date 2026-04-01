@@ -1,0 +1,49 @@
+.container {
+  background: var(--bg-surface);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  padding: 14px;
+  border-radius: var(--radius);
+}
+
+/* variações */
+.container.primary {
+  border-color: var(--color-primary);
+}
+
+.container.danger {
+  border-color: var(--color-danger);
+}
+
+/* layout */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* MOBILE (base) */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+/* DESKTOP (melhoria) */
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

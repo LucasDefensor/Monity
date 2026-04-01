@@ -1,0 +1,44 @@
+@import "./variables.css";
+
+/* melhora leitura em mobile */
+html {
+  font-size: 15px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* BUTTON */
+button {
+  background: var(--color-primary);
+  border: none;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: #000;
+}
+
+/* INPUT */
+input, select {
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  margin: 5px;
+}

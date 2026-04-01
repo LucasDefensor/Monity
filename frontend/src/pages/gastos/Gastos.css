@@ -1,0 +1,171 @@
+/* ===== CONTAINER ===== */
+.gastos-container {
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.gastos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ===== FILTROS ===== */
+.gastos-filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gastos-filtros input,
+.gastos-filtros select {
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-default);
+  background: var(--card);
+}
+
+/* ===== MÉTRICAS ===== */
+.gastos-metricas {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.gastos-metricas .card {
+  flex: 1;
+}
+
+/* ===== TABELA ===== */
+.gastos-tabela {
+  width: 100%;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gastos-tabela th,
+.gastos-tabela td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-default);
+  text-align: left;
+}
+
+.gastos-tabela th {
+  font-weight: 600;
+}
+
+/* ❗ mantém sem hover branco (como você queria antes) */
+.gastos-tabela tr:hover {
+  background-color: transparent;
+}
+
+/* ===== AÇÕES ===== */
+.btn-add {
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-edit {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: var(--radius);
+  background: var(--color-primary-soft);
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: #ff4d4f;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== GERAL ===== */
+button {
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+option {
+  background-color: var(--bg-main);
+}
+
+/* OVERLAY */
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: var(--blur);
+  z-index: 998;
+}
+
+/* DRAWER */
+.form-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  height: 100vh;
+
+  background: var(--card);
+  border-left: 1px solid var(--border-default);
+
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+
+  animation: slideIn 0.25s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* HEADER */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+/* BODY */
+.form-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-body input {
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-default);
+}
+
+/* FOOTER */
+.form-footer {
+  margin-top: auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}

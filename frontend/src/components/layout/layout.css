@@ -1,0 +1,121 @@
+/* ===== LAYOUT BASE ===== */
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  background: var(--bg-header);
+  backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--border-default);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo{
+  color: var(--color-primary-soft);
+}
+
+.logo span{
+  color: var(--color-primary);
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+/* ===== BOTÃO MENU ===== */
+.menu-btn {
+  font-size: 20px;
+  background: none;
+  display: block;
+}
+
+
+/* ===== OVERLAY (DESFOQUE + ESCURECIMENTO) ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  backdrop-filter: var(--blur);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  z-index: 998;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== DRAWER ===== */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -260px;
+
+  width: 260px;
+  height: 100vh;
+
+  background: var(--bg-surface);
+  backdrop-filter: var(--blur);
+  border-left: 1px solid var(--border-default);
+
+  padding: 0px;
+
+  transition: right 0.3s ease;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* aberto */
+.drawer.open {
+  right: 0;
+}
+
+/* ===== HEADER DO MENU ===== */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  padding: 16px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px;
+}
+
+/* ===== ITEM ===== */
+.nav-item {
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--color-primary-soft);
+}
