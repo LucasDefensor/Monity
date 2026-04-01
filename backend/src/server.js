@@ -2,11 +2,12 @@ import { app } from './app.js'
 import cors from '@fastify/cors'
 
 await app.register(cors, {
-  origin: ['http://localhost:5173'],
+  origin: ['https://gmonity.netlify.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 })
 
-app.listen({
-  host: '0.0.0.0',
-  port: process.env.PORT ?? 3333,
-})
+const PORT = process.env.PORT || 3333;
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
